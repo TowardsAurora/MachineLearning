@@ -16,7 +16,7 @@ b=k*x.avg-y
 """
 
 
-def spilt_date(data, spilt_point):
+def spilt_data(data, spilt_point):
     train_data = data[0:spilt_point]
     test_data = data[spilt_point:len(data)]
     return train_data, test_data
@@ -109,7 +109,7 @@ if __name__ == '__main__':
     X, Y = create_data(data)
     print("data length:", length)
     spilt_point = 7
-    train_data, test_data = spilt_date(data, spilt_point)
+    train_data, test_data = spilt_data(data, spilt_point)
     train_X, train_Y = create_data(train_data)
     print("train:", train_X, train_Y)
     test_X, test_Y = create_data(test_data)
